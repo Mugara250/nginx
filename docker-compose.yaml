@@ -1,5 +1,6 @@
 services:
   app1:
+    restart: always
     build: .
     container_name: app1
     expose:
@@ -8,6 +9,7 @@ services:
       - backend
 
   app2:
+    restart: always
     build: .
     container_name: app2
     expose:
@@ -16,6 +18,7 @@ services:
       - backend
 
   app3:
+    restart: always
     build: .
     container_name: app3
     expose:
@@ -24,6 +27,7 @@ services:
       - backend
 
   nginx:
+    restart: always
     image: nginx:latest
     container_name: nginx
     ports:
