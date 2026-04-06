@@ -11,6 +11,6 @@ app.use('/', (req, res) => {
   console.log(`Request served by ${replicaApp}`);
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
   console.log(`${replicaApp} is listening on port ${port}`);
 });
