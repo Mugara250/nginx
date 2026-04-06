@@ -3,11 +3,10 @@ const path = require('path');
 const port = 3000;
 const app = express();
 
-app.use('/images', express.static(path.join(__dirname, 'images')));
-
+app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'index.html'));
-  console.log('request served by node.js(express) application');
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  console.log('Request served');
 });
 
 app.listen(port, () => {
